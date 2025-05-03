@@ -16,8 +16,8 @@ This assignment demonstrates core IAM operations using the AWS Console and CLI, 
 ### 📸 Screenshots
 
 - IAM User Creation: <img width="785" alt="image" src="https://github.com/user-attachments/assets/2ae1d29b-9d6c-4b4d-970d-107007701d44" />
-- Attach Policy(screenshots/attach-policy.png): https://github.com/user-attachments/assets/fba41d71-f100-410b-bdd6-ac9665e3d123
-- Policy Details(screenshots/policy-details.png): https://github.com/user-attachments/assets/bc142481-c8bc-4817-bf93-6143afcc70cc
+- Attach Policy(screenshots/attach-policy.png): : <img width="775" alt="image" src="https://github.com/user-attachments/assets/fba41d71-f100-410b-bdd6-ac9665e3d123" />
+- Policy Details(screenshots/policy-details.png):    <img width="772" alt="image" src="https://github.com/user-attachments/assets/bc142481-c8bc-4817-bf93-6143afcc70cc"/>
 
 ---
 
@@ -35,9 +35,9 @@ This assignment demonstrates core IAM operations using the AWS Console and CLI, 
 
 ### 📸 Screenshots
 
-- ![S3 Bucket Creation Attempt: https://github.com/user-attachments/assets/5280f227-191b-45e1-81e1-05011f87bdf5
-- ![EC2 Launch Attempt: https://github.com/user-attachments/assets/db24ab4b-c40e-41b2-8ea0-0160b0fe7be3" />
-- ![Subnet Creation Attempt: https://github.com/user-attachments/assets/ec799ab0-107b-4e6c-91ee-ef71ae2ecda0" />
+- ![S3 Bucket Creation Attempt: <img width="775" alt="image" src="https://github.com/user-attachments/assets/5280f227-191b-45e1-81e1-05011f87bdf5"/>
+- ![EC2 Launch Attempt: <img width="785" alt="image" src="https://github.com/user-attachments/assets/db24ab4b-c40e-41b2-8ea0-0160b0fe7be3" />
+- ![Subnet Creation Attempt: <img width="958" alt="image" src="https://github.com/user-attachments/assets/ec799ab0-107b-4e6c-91ee-ef71ae2ecda0" />
 
 ---
 
@@ -53,11 +53,12 @@ This assignment demonstrates core IAM operations using the AWS Console and CLI, 
 
 ### 📸 Screenshot
 
-- ![MFA Setup : https://github.com/user-attachments/assets/901704ff-4352-40e4-9aaf-feaad7176a54" />
-https://github.com/user-attachments/assets/c13d495d-8c35-4fb1-80e7-b0df597724fb" />
-https://github.com/user-attachments/assets/ddabaf67-dc20-4a34-a8b9-155d89ff31f1" />
+- ![MFA Setup : <img width="859" alt="image" src="https://github.com/user-attachments/assets/901704ff-4352-40e4-9aaf-feaad7176a54" />
+<img width="567" alt="image" src="https://github.com/user-attachments/assets/c13d495d-8c35-4fb1-80e7-b0df597724fb" />
+<img width="866" alt="image" src="https://github.com/user-attachments/assets/ddabaf67-dc20-4a34-a8b9-155d89ff31f1" />
 
-MFA Required at the point of logging in for the User: https://github.com/user-attachments/assets/c817cc20-cbd7-47e8-b73e-7dd9302af425" />
+MFA Required at the point of logging in for the User: 
+<img width="297" alt="image" src="https://github.com/user-attachments/assets/c817cc20-cbd7-47e8-b73e-7dd9302af425" />
 
 ---
 
