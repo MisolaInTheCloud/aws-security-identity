@@ -1,4 +1,4 @@
-# AWS Security and Identity Assignment
+# AWS Security and Identity
 
 This assignment demonstrates core IAM operations using the AWS Console and CLI, including user creation, permission testing, MFA setup, and custom role policies.
 
@@ -15,9 +15,9 @@ This assignment demonstrates core IAM operations using the AWS Console and CLI, 
 
 ### 📸 Screenshots
 
-- IAM User Creation: https://github.com/user-attachments/assets/2ae1d29b-9d6c-4b4d-970d-107007701d44" />
-- Attach Policy(screenshots/attach-policy.png): https://github.com/user-attachments/assets/fba41d71-f100-410b-bdd6-ac9665e3d123" />
-- Policy Details(screenshots/policy-details.png): https://github.com/user-attachments/assets/bc142481-c8bc-4817-bf93-6143afcc70cc" />
+- IAM User Creation: https://github.com/user-attachments/assets/2ae1d29b-9d6c-4b4d-970d-107007701d44
+- Attach Policy(screenshots/attach-policy.png): https://github.com/user-attachments/assets/fba41d71-f100-410b-bdd6-ac9665e3d123
+- Policy Details(screenshots/policy-details.png): https://github.com/user-attachments/assets/bc142481-c8bc-4817-bf93-6143afcc70cc
 
 ---
 
