@@ -37,6 +37,8 @@ Enforced MFA for the user:
 
 MFA Done: <img width="866" alt="image" src="https://github.com/user-attachments/assets/ddabaf67-dc20-4a34-a8b9-155d89ff31f1" />
 
+MFA Required at the point of logging in for the User: <img width="297" alt="image" src="https://github.com/user-attachments/assets/c817cc20-cbd7-47e8-b73e-7dd9302af425" />
+
 
 Created a new role with access to read ECS only: 
 This grants read-only access to Amazon ECR (Elastic Container Registry) across all repositories in the AWS account.
