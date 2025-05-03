@@ -1,45 +1,69 @@
-# AWS Security and Identity 
+# AWS Security and Identity Assignment
 
-This assignment demonstrates key Identity and Access Management (IAM) operations in AWS using the AWS CLI.
+This assignment demonstrates core IAM operations using the AWS Console and CLI, including user creation, permission testing, MFA setup, and custom role policies.
 
 ---
 
 ## 1. IAM User Creation with Restricted Permissions
 
-### Steps:
-1. Create a new IAM user--> User name: "testUserM4aceProject". I logged in to my Root account to create 
-   ```bash
-      aws iam create-policy --policy-name AmazonS3ReadOnlyAccess \
+**Objective:** Create an IAM user with read-only access to Amazon S3.
 
-   <img width="785" alt="image" src="https://github.com/user-attachments/assets/2ae1d29b-9d6c-4b4d-970d-107007701d44" />
-   Attached Policies directly: <img width="775" alt="image" src="https://github.com/user-attachments/assets/fba41d71-f100-410b-bdd6-ac9665e3d123" />
+### 🛠️ Steps
 
-   I atached 'Read Only Access for S3':
+- Created IAM user: testUserM4aceProject
+- Assigned managed policy: AmazonS3ReadOnlyAccess
 
-   <img width="772" alt="image" src="https://github.com/user-attachments/assets/bc142481-c8bc-4817-bf93-6143afcc70cc" />
+### 📸 Screenshots
 
+- IAM User Creation: https://github.com/user-attachments/assets/2ae1d29b-9d6c-4b4d-970d-107007701d44" />
+- Attach Policy(screenshots/attach-policy.png): https://github.com/user-attachments/assets/fba41d71-f100-410b-bdd6-ac9665e3d123" />
+- Policy Details(screenshots/policy-details.png): https://github.com/user-attachments/assets/bc142481-c8bc-4817-bf93-6143afcc70cc" />
 
-Tried to create S3 Bucket with the test user and got this response:
-<img width="958" alt="image" src="https://github.com/user-attachments/assets/5280f227-191b-45e1-81e1-05011f87bdf5" />
+---
 
-Tried to launch EC2
+## 2. Testing User Permissions
 
-<img width="945" alt="image" src="https://github.com/user-attachments/assets/db24ab4b-c40e-41b2-8ea0-0160b0fe7be3" />
+**Objective:** Verify read-only access to S3 and denied access to other services.
 
-Tested with creating subnets too but :
+### 🔍 CLI/Console Tests
 
-<img width="815" alt="image" src="https://github.com/user-attachments/assets/ec799ab0-107b-4e6c-91ee-ef71ae2ecda0" />
+- ✅ Listed S3 buckets successfully
+- ❌ Denied when attempting:
+  - Creating an S3 bucket
+  - Launching EC2 instances
+  - Creating Subnets
 
-Enforced MFA for the user:
-<img width="859" alt="image" src="https://github.com/user-attachments/assets/901704ff-4352-40e4-9aaf-feaad7176a54" />
+### 📸 Screenshots
 
-<img width="567" alt="image" src="https://github.com/user-attachments/assets/c13d495d-8c35-4fb1-80e7-b0df597724fb" />
+- ![S3 Bucket Creation Attempt: https://github.com/user-attachments/assets/5280f227-191b-45e1-81e1-05011f87bdf5
+- ![EC2 Launch Attempt: https://github.com/user-attachments/assets/db24ab4b-c40e-41b2-8ea0-0160b0fe7be3" />
+- ![Subnet Creation Attempt: https://github.com/user-attachments/assets/ec799ab0-107b-4e6c-91ee-ef71ae2ecda0" />
 
-MFA Done: <img width="866" alt="image" src="https://github.com/user-attachments/assets/ddabaf67-dc20-4a34-a8b9-155d89ff31f1" />
+---
 
-MFA Required at the point of logging in for the User: <img width="297" alt="image" src="https://github.com/user-attachments/assets/c817cc20-cbd7-47e8-b73e-7dd9302af425" />
+## 3. Enabling Multi-Factor Authentication (MFA)
 
+**Objective:** Secure the IAM user with MFA.
 
+### 🛠️ Steps
+
+- Used AWS Console to enable virtual MFA device
+- Scanned QR code using authenticator app
+- Successfully activated MFA
+
+### 📸 Screenshot
+
+- ![MFA Setup : https://github.com/user-attachments/assets/901704ff-4352-40e4-9aaf-feaad7176a54" />
+https://github.com/user-attachments/assets/c13d495d-8c35-4fb1-80e7-b0df597724fb" />
+https://github.com/user-attachments/assets/ddabaf67-dc20-4a34-a8b9-155d89ff31f1" />
+
+MFA Required at the point of logging in for the User: https://github.com/user-attachments/assets/c817cc20-cbd7-47e8-b73e-7dd9302af425" />
+
+---
+
+## 4. Creating and Attaching a Custom Policy to an IAM Role
+
+**Objective:** Define a custom IAM policy and attach it to a role with EC2 read-only access.
 Created a new role with access to read ECS only: 
 This grants read-only access to Amazon ECR (Elastic Container Registry) across all repositories in the AWS account.
 
@@ -63,3 +87,20 @@ With this Json Permission:
 aws iam attach-user-policy \
   --user-name restricted-user \
   --policy-arn arn:aws:iam::<account-id>:policy/ReadOnlyAccessPolicy
+
+### 🛠️ Policy JSON
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ec2:DescribeInstances",
+        "ec2:DescribeVolumes"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
