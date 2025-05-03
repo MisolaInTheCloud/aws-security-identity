@@ -8,12 +8,12 @@ This assignment demonstrates core IAM operations using the AWS Console and CLI, 
 
 **Objective:** Create an IAM user with read-only access to Amazon S3.
 
-### 🛠️ Steps
+### Steps
 
 - Created IAM user: testUserM4aceProject
 - Assigned managed policy: AmazonS3ReadOnlyAccess
 
-### 📸 Screenshots
+### Screenshots
 
 - IAM User Creation:
 
@@ -88,35 +88,20 @@ MFA required at the point of logging in for the User: '
 
 **Objective:** Define a custom IAM policy and attach it to a role with EC2 read-only access.
 
-aws iam create-user --user-name restricted-user
-   
-aws iam attach-user-policy \
-  --user-name restricted-user \
-  
 
 ### Policy JSON
 
 <img width="898" alt="image" src="https://github.com/user-attachments/assets/8fcfe024-a08b-4e9e-a7d6-a146d4b861aa" />
 
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": [
-        "ec2:DescribeInstances",
-        "ec2:DescribeVolumes"
-      ],
-      "Resource": "*"
-    }
-  ]
-}
-
-
 
 With this JSON Permission: 
+
 <img width="846" alt="image" src="https://github.com/user-attachments/assets/da02a3dd-e6a3-4934-9313-6a1a08e573a2" />
+
+
+NOTE: This project demonstrates how to create a custom IAM policy, attach it to a role, and verify the permissions via CLI by assuming the role. It reinforces the principle of least privilege and the practical use of roles in secure AWS access.
+
+
 
 
  
